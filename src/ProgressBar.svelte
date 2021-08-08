@@ -1,0 +1,29 @@
+<script>
+
+
+
+</script>
+
+<style>
+
+    .progress-bar-container {
+        width: 100%;
+        height: 2rem;
+        margin: 1rem 0 2rem;
+        border: solid 1px var(--clr-black-100);
+        border-radius: 3rem;
+        overflow: hidden;
+    }
+    .progress-bar {
+        background: var(--clr-green);
+        width: 23%;
+        height: 100%;
+    }
+
+</style>
+
+<div class="progress-bar-container">
+
+    <div class="progress-bar"></div>
+
+</div>

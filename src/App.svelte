@@ -1,14 +1,37 @@
 <script>
+    
+    import Timer from "./Timer.svelte";
+    import HowTo from "./HowTo.svelte";
 
 </script>
 
 
 <style>
 
+    main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        max-width: 60rem;
+        margin: auto;
+        padding: 0 1rem;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 900;
+        background: var(--clr-gradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
 </style>
 
 
 <main>
-    <h1>test</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam nisi, quidem accusamus, consectetur maxime cumque quasi tempora saepe illo iure dolore autem ipsum doloribus sit sint placeat harum ad quod.</p>
+    <h1>Handwashing App</h1>
+    <Timer />
+    <HowTo />
 </main>
