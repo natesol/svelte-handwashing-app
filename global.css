@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+/*
+    font-family: 'Lato', sans-serif;
+*/
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+html,
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+label {
+    display: block;
+}
+
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-padding: 0.4em 0;
+    padding: 0.4em;
+    margin: 0 0 0.5em 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+:root {
+
+    --clr-black-100  : #d1d7da;
+    --clr-black-500  : #3a3a3a;
+    --clr-black-1000 : #212121;
+
+    --clr-white-500  : #fbfdff;
+    --clr-white-1000 : #fdfdfd;
+
+    --clr-green : #13a073;
+
+    --clr-primary : #2a42b5;
+    --clr-accent  : #10b6f3;
+
+    --clr-txt-title  : var(--clr-primary);
+    --clr-txt-body   : var(--clr-black-500);
+    --clr-txt-onDark : var(--clr-white-500);
+    --clr-bg-body    : var(--clr-white-1000);
+    --clr-gradient   : linear-gradient(90deg, var(--clr-accent) 0%, var(--clr-primary) 100%);
+}
+
+@media screen and (max-width: 720px) {
+    html { font-size: 14px; }
+}
+
+.sr-only {
+    display: none;
+}
+
+body {
+    font-family: 'Lato';
+    color: var(--clr-txt-body);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-transform: capitalize;
+}
+
+
+button {
+    outline: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: .5em 1em;
+    border-radius: .3rem;
+    border: 0;
+    cursor: pointer;
+    transition: all 70ms ease-in-out;
+    -webkit-transition: all 70ms ease-in-out;
+    -moz-transition: all 70ms ease-in-out;
+    -ms-transition: all 70ms ease-in-out;
+    -o-transition: all 70ms ease-in-out;
+}
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+button:disabled:hover,
+button:disabled:focus {
+    box-shadow: none;
+    transform: none;
+}
+button:not(:disabled):active {
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+}
+button:hover,
+button:focus {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+}
