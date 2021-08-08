@@ -1,21 +1,27 @@
 <script>
 
+    import { createEventDispatcher } from 'svelte';
     import ProgressBar from "./ProgressBar.svelte";
 
+    const dispatch = createEventDispatcher();
     const TOTAL_SECONDS = 20;
 
     let secondsLeft = TOTAL_SECONDS;
     let isTimerRunning = false;
     $: progress = 0;
 
-    const startTimer = () => {
+    const startClock = () => {
         isTimerRunning = true;
-
+        
         const timer = setInterval( () => {
+            dispatch('timerTick');
             secondsLeft--;
             progress = (TOTAL_SECONDS - secondsLeft) / TOTAL_SECONDS * 100;
-            if (secondsLeft === 0) {
+
+            if ( secondsLeft === 0 ) {
                 clearInterval(timer);
+                dispatch('timerEnd');
+
                 setTimeout( () => {
                     secondsLeft = TOTAL_SECONDS;
                     progress = 0;
@@ -23,7 +29,6 @@
                 }, 1000);
             }
         } , 1000);
-
     }
     
 </script>
@@ -57,6 +62,6 @@
 
     <ProgressBar progress={progress} />
 
-    <button on:click={startTimer} disabled={isTimerRunning}>start</button>
+    <button on:click={startClock} disabled={isTimerRunning}>start</button>
 
 </div>

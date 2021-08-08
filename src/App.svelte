@@ -3,6 +3,16 @@
     import Timer from "./Timer.svelte";
     import HowTo from "./HowTo.svelte";
 
+    let audioTick;
+    let audioSuccess;
+
+    const timerTickHandler = () => {
+        audioTick.play();
+    }
+    const timerEndHandler = () => {
+        audioSuccess.play();
+    }
+
 </script>
 
 
@@ -31,7 +41,21 @@
 
 
 <main>
+    
     <h1>Handwashing App</h1>
-    <Timer />
+
+    <Timer
+        on:timerTick={timerTickHandler}
+        on:timerEnd={timerEndHandler}
+    />
+    
+    <audio bind:this={audioTick} >
+        <source src="single-tick.wav" type="audio/wav">
+    </audio>
+    <audio bind:this={audioSuccess} >
+        <source src="success-bell.wav" type="audio/wav">
+    </audio>
+    
     <HowTo />
+
 </main>
