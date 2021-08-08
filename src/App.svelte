@@ -13,8 +13,8 @@
         align-items: center;
         flex-direction: column;
         max-width: 60rem;
-        margin: auto;
-        padding: 0 1rem;
+        margin: 0 auto;
+        padding: 0 1rem 2rem;
     }
 
     h1 {

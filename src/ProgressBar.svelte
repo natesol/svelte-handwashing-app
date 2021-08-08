@@ -1,6 +1,6 @@
 <script>
 
-
+    export let progress = 0;
 
 </script>
 
@@ -24,6 +24,8 @@
 
 <div class="progress-bar-container">
 
-    <div class="progress-bar"></div>
+    <div class="progress-bar" style="width: {progress}%;">
+        <span class="sr-only">{progress}%</span>
+    </div>
 
 </div>
