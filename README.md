@@ -1,7 +1,6 @@
 # Svelte Study Project
 ---
-#
-#
+
 ## Handwashing App
 
 Simple one page static website build with Svelte for experimental and learning purposes.
